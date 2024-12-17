@@ -1,0 +1,86 @@
+{
+	"name": "main",
+	"layer": "bottom",
+	"position": "bottom",
+
+	"modules-left": ["hyprland/workspaces"],
+	"modules-right": ["tray", "wireplumber", "clock#time", "clock#date"],
+
+	"hyprland/workspaces": {
+		"format": "{windows}",
+		"all-outputs": true,
+		"window-rewrite": {
+			"title<.*youtube.*>": "",
+			"title<.*twitch.*>": "",
+			"title<.*netflix.*>": "",
+			"class<firefox>": "",
+			"title<(python|pip).*>": "",
+			"title<(cargo|rustup).*>": "",
+			"class<kitty>": "",
+			"class<(code-oss|dev\\.zed\\.Zed)>": ""
+		},
+		"window-rewrite-default": "",
+		"format-window-separator": " "
+	},
+
+	"tray": {
+		"icon-size": 16,
+		"spacing": 8
+	},
+
+	"wireplumber": {
+		"format": "<b>{icon}</b> {volume}%",
+		"format-icons": ["", "", ""],
+		"format-muted": "<b></b> {volume}%",
+		"scroll-step": 4.0,
+		"max-volume": 100.0,
+		"on-click": "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"
+	},
+
+	"clock#time": {
+		"interval": 60,
+		"format": "<b></b> {:%H:%M}"
+	},
+
+	"clock#date": {
+		"interval": 60,
+		"format": "<b></b> {:%Y-%m-%d}"
+	}
+}
+
+// {
+// 	"name": "main",
+// 	"layer": "bottom",
+// 	"position": "bottom",
+// 	"margin": "0 16 16 16",
+
+// 	"spacing": 4,
+// 	"modules-left": ["hyprland/workspaces", "hyprland/window"],
+// 	"modules-right": ["tray", "wireplumber", "network", "clock"],
+
+// 	"hyprland/workspaces": {
+// 		//"move-to-monitor": true,
+// 		"persistent-workspaces": {
+// 			"*": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+// 		}
+// 	},
+
+// 	"tray": {
+// 		"spacing": 8
+// 	},
+
+// 	"wireplumber": {
+// 		"format": "{icon} {volume}%",
+// 		"format-muted": " {volume}%",
+// 		"format-icons": ["", "", ""],
+// 		"scroll-step": 5.0,
+// 		"on-click": "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"
+// 	},
+
+// 	"network": {
+// 		"interval": 5,
+// 		"format": "? {bandwidthTotalBits}",
+// 		"format-ethernet": " {bandwidthTotalBits}",
+// 		"format-wifi": " {bandwidthTotalBits}",
+// 		"tooltip-format": " {ipaddr}/{cidr}"
+// 	},

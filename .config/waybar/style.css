@@ -1,0 +1,118 @@
+window#waybar.main {
+	border-top: 1px solid #ffffff;
+	background: rgba(0, 0, 0, 0.6); /* 0.8 to be consistent with kitty */
+	color: #ffffff;
+	font-family: "Ubuntu", "Font Awesome 6 Free";
+	font-size: 16px;
+}
+
+.module {
+	padding: 0.35em 0.45em;
+	border-top: 1px solid #ffffff;
+}
+
+.modules-left .module {
+	border-right: 1px solid #ffffff;
+}
+
+.modules-right .module {
+	border-left: 1px solid #ffffff;
+}
+
+/********
+ * CAVA *
+ ********/
+
+#cava {
+	font-family: monospace;
+}
+
+/**************
+ * WORKSPACES *
+ **************/
+
+#workspaces {
+	border: none;
+	padding: 0;
+}
+
+#workspaces button {
+	padding: 0.25em 0.45em;
+	border-top: none;
+	border-right: 1px solid #ffffff;
+	border-bottom: none;
+	border-left: none;
+	border-radius: 0;
+	color: #ffffff;
+	box-shadow: none;
+	text-shadow: none;
+}
+
+#workspaces button.empty {
+	color: #646881; /* TODO: change? */
+}
+
+#workspaces button:hover {
+	background: rgba(222, 222, 255, 0.15);
+}
+
+
+
+
+
+
+/*
+#clock,
+#network,
+#wireplumber,
+#tray,
+#workspaces {
+	margin: 6px 0 6px 0;
+	border: 2px solid #3f4357;
+	border-radius: 8px;
+	background: #313447;
+}
+
+#clock,
+#network,
+#wireplumber,
+#tray {
+	padding: 2px 6px;
+}
+
+#clock * right-most module * {
+	margin-right: 6px;
+}
+
+#workspaces * left-most module * {
+	margin-left: 6px;
+}
+
+**************
+ * WORKSPACES *
+ **************
+
+* TODO: use same text color for empty, but open, workspaces *
+#workspaces button {
+	padding: 2px 6px;
+	border: 0;
+	border-radius: 0;
+	color: #b3bbda;
+	box-shadow: none;
+	text-shadow: none;
+	transition: all 0ms;
+}
+
+#workspaces button.empty {
+	color: #646881;
+}
+
+#workspaces button.active {
+	color: #97c786;
+}
+
+#workspaces button:hover {
+	background: #3f4357;
+}
+
+*/
