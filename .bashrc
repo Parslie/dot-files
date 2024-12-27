@@ -18,3 +18,5 @@ command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init -)"
 
 alias dot="git --git-dir=$HOME/.dot --work-tree=$HOME"
+
+export EDITOR=nvim
