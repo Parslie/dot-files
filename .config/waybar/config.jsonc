@@ -10,12 +10,14 @@
 		"format": "{windows}",
 		"all-outputs": true,
 		"window-rewrite": {
+			"title<.*github.*>": "",
 			"title<.*youtube.*>": "",
 			"title<.*twitch.*>": "",
 			"title<.*netflix.*>": "",
 			"class<firefox>": "",
 			"title<(python|pip).*>": "",
 			"title<(cargo|rustup).*>": "",
+			"class<discord>": "",
 			"class<kitty>": "",
 			"class<(code-oss|dev\\.zed\\.Zed)>": ""
 		},
