@@ -19,6 +19,26 @@ window#waybar.main {
 	border-left: 1px solid #ffffff;
 }
 
+/**********
+ * CUSTOM *
+ **********/
+
+#custom-power {
+	padding: 0.25em 0.45em;
+	border-top: none;
+	border-right: 1px solid #ffffff;
+	border-bottom: none;
+	border-left: none;
+	border-radius: 0;
+	color: #ffffff;
+	box-shadow: none;
+	text-shadow: none;
+}
+
+#custom-power:hover {
+	background: rgba(222, 222, 255, 0.15);
+}
+
 /********
  * CAVA *
  ********/

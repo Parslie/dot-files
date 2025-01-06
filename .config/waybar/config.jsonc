@@ -3,8 +3,13 @@
 	"layer": "bottom",
 	"position": "bottom",
 
-	"modules-left": ["hyprland/workspaces"],
-	"modules-right": ["tray", "wireplumber", "clock#time", "clock#date"],
+	"modules-left": ["custom/power","hyprland/workspaces"],
+	"modules-right": ["tray", "backlight", "wireplumber", "clock#time", "clock#date", "battery"],
+
+	"custom/power": {
+		"format": "",
+		"on-click": "sh $HOME/.config/fuzzel/scripts/power-menu.sh"
+	},
 
 	"hyprland/workspaces": {
 		"format": "{windows}",
@@ -30,11 +35,18 @@
 		"spacing": 8
 	},
 
+	"backlight": {
+		"interval": 5,
+		"format":"<b>{icon}</b> {percent}%",
+		"format-icons": ["", "", "", ""],
+		"scroll-step": 5.0
+	},
+
 	"wireplumber": {
 		"format": "<b>{icon}</b> {volume}%",
 		"format-icons": ["", "", ""],
 		"format-muted": "<b></b> {volume}%",
-		"scroll-step": 4.0,
+		"scroll-step": 5.0,
 		"max-volume": 100.0,
 		"on-click": "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"
 	},
@@ -47,6 +59,12 @@
 	"clock#date": {
 		"interval": 60,
 		"format": "<b></b> {:%Y-%m-%d}"
+	},
+
+	"battery": {
+		"interval": 5,
+		"format": "<b>{icon}</b> {capacity}%",
+		"format-icons": ["", "", "", "", ""]
 	}
 }
 
