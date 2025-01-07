@@ -4,6 +4,7 @@
 sh ~/.config/hypr/scripts/close_windows.sh
 
 # Wait and check if all windows are closed
+hyprctl notify 1 3000 0 "Rebooting..."
 sleep 3
 WINDOW_COUNT=$(sh ~/.config/hypr/scripts/window_count.sh)
 
@@ -12,5 +13,5 @@ if [ $WINDOW_COUNT -eq 0 ]
 then
 	systemctl reboot
 else
-	notify-send -t 5000 "Could not reboot" "Not all windows could be closed"
+	hyprctl notify 3 5000 0 "Could not reboot (not all windows could be closed)"
 fi

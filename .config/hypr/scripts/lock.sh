@@ -1,3 +1,3 @@
 #!/bin/bash
 
-hyprlock
+pidof hyprlock || hyprlock  # Only lock if not already locked
