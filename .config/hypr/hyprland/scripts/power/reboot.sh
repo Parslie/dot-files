@@ -1,12 +1,12 @@
 #!/bin/bash
 
 # Close all windows
-sh ~/.config/hypr/scripts/close_windows.sh
+sh ~/.config/hypr/hyprland/scripts/close_windows.sh
 
 # Wait and check if all windows are closed
 hyprctl notify 1 3000 0 "Rebooting..."
 sleep 3
-WINDOW_COUNT=$(sh ~/.config/hypr/scripts/window_count.sh)
+WINDOW_COUNT=$(sh ~/.config/hypr/hyprland/scripts/window_count.sh)
 
 # Poweroff system if all windows are closed
 if [ $WINDOW_COUNT -eq 0 ]
