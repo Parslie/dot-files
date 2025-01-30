@@ -4,7 +4,7 @@
 	"position": "bottom",
 
 	"modules-left": ["custom/power","hyprland/workspaces"],
-	"modules-right": ["tray", "backlight", "wireplumber", "clock#time", "clock#date", "battery"],
+	"modules-right": ["tray", "network", "backlight", "wireplumber", "clock#time", "clock#date", "battery"],
 
 	"custom/power": {
 		"format": "",
@@ -24,7 +24,8 @@
 			"title<(cargo|rustup).*>": "",
 			"class<discord>": "",
 			"class<kitty>": "",
-			"class<(code-oss|dev\\.zed\\.Zed)>": ""
+			"class<(code-oss|dev\\.zed\\.Zed)>": "",
+			"class<obsidian>": ""
 		},
 		"window-rewrite-default": "",
 		"format-window-separator": " "
@@ -35,11 +36,19 @@
 		"spacing": 8
 	},
 
+	"network": {
+		"interval": 5,
+		"format-wifi": "<b></b> {essid}",
+		"format-ethernet": "<b></b>",
+		"tooltip-format": "<b></b> {ipaddr}/{cidr}\n<b></b> {bandwidthDownBits}\n<b></b> {bandwidthUpBits}"
+	},
+
 	"backlight": {
 		"interval": 5,
 		"format":"<b>{icon}</b> {percent}%",
-		"format-icons": ["", "", "", ""],
-		"scroll-step": 5.0
+		"format-icons": ["", "", "", ""],
+		"scroll-step": 5.0,
+		"reverse-scrolling": true
 	},
 
 	"wireplumber": {
@@ -64,6 +73,7 @@
 	"battery": {
 		"interval": 5,
 		"format": "<b>{icon}</b> {capacity}%",
+		"format-charging": "<b>{icon}</b>  {capacity}%",
 		"format-icons": ["", "", "", "", ""]
 	}
 }
